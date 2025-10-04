@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Bitcrusher",
+  "version": "1.0",
+  "description": "Aplica bitcrush ao áudio do YouTube.",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
